@@ -15,6 +15,7 @@ body {
     font-size: 1.6rem;
     font-family: 'Poppins', sans-serif;
 }
+
 /* Common */
 a {
     text-decoration: none;
@@ -34,15 +35,49 @@ a {
 }
 
 .btn:hover {
-    opacity : 0.9;
+    opacity: 0.9;
+    cursor: pointer;
 }
 
-.main-content{
+.heading {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: #171100;
+}
+
+.heading.lv1 {
+    font-size: 5.8rem;
+    line-height: 1.17;
+}
+
+.heading.lv2 {
+    font-size: 3.8rem;
+    line-height: 1.26;
+}
+
+.main-content {
     width: 1170px;
     max-width: calc(100% - 48px);
     margin-left: auto;
     margin-right: auto;
 }
+
+.line-clamp {
+    display: -webkit-box;
+    -webkit-line-clamp: var(--line-clamp, 1);
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.line-clamp.line-2 {
+    --line-clamp: 2;
+}
+
+.break-all {
+    word-break: break-all;
+}
+
 /* Header */
 .header {
     background: #FFFCF4;
@@ -76,7 +111,8 @@ a {
     color: #5F5B53;
 }
 
-.nav a:hover, .nav li.active a {
+.nav a:hover,
+.nav li.active a {
     /* font-weight: 600; */
     text-shadow: 1px 0 0 currentColor;
     color: #171100;
@@ -111,6 +147,7 @@ a {
 .hero .body {
     display: flex;
 }
+
 /* Hero left */
 .hero .media-block {
     width: 48%;
@@ -131,7 +168,7 @@ a {
     right: 0;
     bottom: 48px;
     width: 270px;
-    padding: 24px; 
+    padding: 24px;
     background: #FFFFFF;
     box-shadow: 0px 16px 32px rgba(0, 0, 0, 0.05);
     border-radius: 12px;
@@ -142,7 +179,7 @@ a {
     align-items: center;
 }
 
-.hero-sumari .item + .item {
+.hero-sumari .item+.item {
     margin-top: 22px;
 }
 
@@ -175,7 +212,7 @@ a {
     color: #5F5B53;
 }
 
-.hero-sumari .info .title {
+.hero-sumari .info .title a{
     font-weight: 600;
     font-size: 1.8rem;
     line-height: 1.67;
@@ -186,15 +223,6 @@ a {
 .hero .content-block {
     width: 52%;
     padding: 64px 0 0 130px;
-}
-
-.hero .heading {
-    font-family: var(--font-heading);
-    font-weight: 700;
-    font-size: 5.8rem;
-    line-height: 1.17;
-    letter-spacing: -0.02em;
-    color: #171100;
 }
 
 .hero .desc {
@@ -256,4 +284,130 @@ a {
     font-size: 4.4rem;
     line-height: 1.23;
     color: #171100;
+}
+
+/* Polular */
+.polular {
+    padding: 65px 0;
+    margin-top: 135px;
+}
+
+.popular-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.popular-top .desc {
+    margin-top: 16px;
+    width: 458px;
+    font-weight: 400;
+    font-size: 1.8rem;
+    line-height: 1.67;
+    color: #5F5B53;
+}
+
+.polular .controls {
+    display: flex;
+    gap: 18px;
+}
+
+.popular-top .control-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    background: transparent;
+}
+
+.popular-top .control-btn:hover {
+    background: var(--primary-color);
+    color: #fff;
+    cursor: pointer;
+}
+
+.polular .course-list {
+    display: flex;
+    gap: 30px;
+    margin-top: 55px;
+}
+
+.polular .course-item {
+    flex: 1;
+    background: #FFFFFF;
+    border: 1px solid #E2DFDA;
+    border-radius: 12px;
+}
+
+.polular .course-item:hover {
+    border-color: transparent;
+    box-shadow: 0px 18px 36px rgba(0, 0, 0, 0.05);
+}
+
+.polular .course-item .thumb {
+    width: calc(100% + 2px);
+    height: 278px;
+    margin: -1px;
+    object-fit: cover;
+    border-radius: 12px 12px 0px 0px;
+}
+
+.polular .course-item .info {
+    padding: 16px 22px 22px;
+}
+
+.polular .course-item .rating,
+.polular .course-item .foot,
+.polular .course-item .head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.polular .course-item .title a {
+    padding-right: 6px;
+    font-weight: 600;
+    font-size: 1.8rem;
+    line-height: 1.67;
+    color: #171100;
+}
+
+.polular .rating .value {
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 1.75;
+    color: #FEA31B;
+    margin-left: 6px;
+}
+
+.polular .course-item .desc {
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 1.86;
+    color: #5F5B53;
+    margin-top: 6px;
+}
+
+.polular .course-item .foot {
+    margin-top: 12px;
+}
+
+.polular .course-item .price {
+    font-weight: 600;
+    font-size: 1.8rem;
+    line-height: 1.67;
+    color: #171100;
+}
+
+.polular .course-item .book-btn {
+    border: none;
+}
+
+.polular .course-item .book-btn:hover {
+    color:#FFFFFF;
+    background-color: var(--primary-color);
 }
